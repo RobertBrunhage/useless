@@ -22,6 +22,7 @@ class _OnboardingPageState extends State<OnboardingPage>
   late final titleOpacity = Tween<double>(begin: 0, end: 1).animate(
     CurvedAnimation(parent: _controller, curve: const Interval(0, 0.5)),
   );
+
   late final buttonOpacity = Tween<double>(begin: 0, end: 1).animate(
     CurvedAnimation(parent: _controller, curve: const Interval(0.4, 1)),
   );
@@ -34,6 +35,12 @@ class _OnboardingPageState extends State<OnboardingPage>
     super.initState();
 
     _controller.forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
