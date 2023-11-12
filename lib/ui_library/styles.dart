@@ -119,4 +119,5 @@ class Styles$Timings {
   static const Duration fast = Duration(milliseconds: 200);
   static const Duration base = Duration(milliseconds: 400);
   static const Duration slow = Duration(milliseconds: 600);
+  static const Duration superSlow = Duration(milliseconds: 1600);
 }

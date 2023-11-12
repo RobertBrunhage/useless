@@ -15,16 +15,16 @@ class OnboardingPage extends StatefulWidget {
 class _OnboardingPageState extends State<OnboardingPage>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
-    duration: Styles$Timings.slow,
+    duration: Styles$Timings.superSlow,
     vsync: this,
   );
 
   late final titleOpacity = Tween<double>(begin: 0, end: 1).animate(
-    CurvedAnimation(parent: _controller, curve: const Interval(0, 0.5)),
+    CurvedAnimation(parent: _controller, curve: const Interval(.3, .5)),
   );
 
   late final buttonOpacity = Tween<double>(begin: 0, end: 1).animate(
-    CurvedAnimation(parent: _controller, curve: const Interval(0.4, 1)),
+    CurvedAnimation(parent: _controller, curve: const Interval(.5, 1)),
   );
 
   bool componentTwoVisible = false;
