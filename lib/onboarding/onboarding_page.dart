@@ -52,46 +52,46 @@ class _OnboardingPageState extends State<OnboardingPage>
           children: [
             Column(
               children: [
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 FadeTransition(
                   opacity: titleOpacity,
-                  child: Text(
+                  child: const Text(
                     'The most Useless App That Ever Existed',
                     style: Styles$Texts.xxxlNormal,
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 AnimatedOpacity(
                   duration: Styles$Timings.base,
                   opacity: componentTwoVisible ? 1 : 0,
-                  child: Text(
+                  child: const Text(
                     'What some fake people say about us',
                     style: Styles$Texts.baseNormal,
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 170),
+                const SizedBox(height: 170),
                 AnimatedOpacity(
                   duration: Styles$Timings.base,
                   opacity: componentThreeVisible ? 1 : 0,
                   child: Transform.translate(
-                    offset: Offset(-45, 0),
+                    offset: const Offset(-45, 0),
                     child: Transform.rotate(
                       angle: -math.pi / 12,
-                      child: PersonCard(),
+                      child: const PersonCard(),
                     ),
                   ),
                 ),
-                SizedBox(height: 60),
+                const SizedBox(height: 60),
                 AnimatedOpacity(
                   duration: Styles$Timings.base,
                   opacity: componentThreeVisible ? 1 : 0,
                   child: Transform.translate(
-                    offset: Offset(80, 0),
+                    offset: const Offset(80, 0),
                     child: Transform.rotate(
                       angle: math.pi / 12,
-                      child: PersonCard(),
+                      child: const PersonCard(),
                     ),
                   ),
                 ),
@@ -128,14 +128,14 @@ class PersonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         maxWidth: 300,
       ),
-      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 22),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 22),
       decoration: BoxDecoration(
         color: Styles$Colors.black100,
         borderRadius: BorderRadius.circular(8),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Styles$Colors.black70,
             offset: Offset(0.0, 10),
@@ -145,8 +145,8 @@ class PersonCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          CircleAvatar(backgroundColor: Colors.white, radius: 28),
-          SizedBox(width: 20),
+          const CircleAvatar(backgroundColor: Colors.white, radius: 28),
+          const SizedBox(width: 20),
           Expanded(
             child: Text(
               'Never wasted my time this hard before.',
@@ -166,7 +166,7 @@ class PrimaryButton extends StatefulWidget {
   final VoidCallback onPressed;
 
   @override
-  _PrimaryButtonState createState() => _PrimaryButtonState();
+  State<PrimaryButton> createState() => _PrimaryButtonState();
 }
 
 class _PrimaryButtonState extends State<PrimaryButton> {
@@ -195,7 +195,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
       onPointerUp: (details) => onTapUp(details),
       child: AnimatedContainer(
         duration: Styles$Timings.superFast,
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         curve: Curves.easeIn,
         decoration: BoxDecoration(
           color: isTapped ? Styles$Colors.yellow600 : Styles$Colors.black100,

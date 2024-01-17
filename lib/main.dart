@@ -69,7 +69,7 @@ class _AppInitializerState extends State<AppInitializer> {
                 child: Text(S.of(context).failedToLoad),
               ),
             ),
-          AppSuccessfulLoading() => ThemedApp(
+          AppSuccessfulLoading() => const ThemedApp(
               home: OnboardingPage(),
             ),
         };
